@@ -1,0 +1,500 @@
+@charset "utf-8";
+html {
+    font-family: 'Helvetica', 'Arial';
+}
+
+body {
+    margin: 0;
+}
+
+header,
+section,
+footer {
+    display: grid;
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.tesla-header {
+    display: grid;
+    grid-template-columns: 0.2fr auto 0.12fr 0.08fr 0.08fr;
+    grid-template-rows: minmax(50px, auto);
+    position: relative;
+}
+
+.tesla-logo {
+    display: block;
+    margin: auto;
+}
+
+.tesla-logo img {
+    height: 50px;
+}
+
+.topnav-list ul {
+    list-style: none;
+    margin: auto 0;
+    padding: 0;
+}
+
+.topnav-list ul li {
+    float: left;
+    margin: auto 0;
+    padding: 16px;
+    font-size: 14px;
+}
+
+.topnav-list ul li::after,
+.shop-btn::after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #343434;
+    opacity: 0;
+}
+
+.topnav-list ul li:hover::after,
+.shop-btn:hover::after {  
+    opacity: 1;
+}
+
+.shop-dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.shop-btn {
+    padding: 16px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.shop-btn:active {
+    border: 1px dashed black;
+    background-color: #eee;
+}
+
+.shop-dropdown-content {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background: #eee;
+}
+
+.shop-dropdown:hover .shop-dropdown-content {
+    display: block;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    margin-left: 5%;
+    font-size: 14px;
+}
+
+.column a {
+    display: block;
+    float: none;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+.column h1,
+.column a {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.search, 
+.user {
+    float: right;
+    margin: auto;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* primaryR1 */
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 1230px;
+    height: 460px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    display: inline-block;
+    position: absoulute;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transform: translateY(-200%);
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, 
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+.quicklink-container {
+    display:grid;
+    grid-template-columns:repeat(6, 205px);
+    box-sizing: border-box;
+}
+
+.quicklink-container ul {
+    grid-column: 2/6;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.quicklink-container ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px 50px;
+}
+
+.quicklink {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.quicklink:hover {
+    text-decoration: underline;
+}
+
+.quicklink img {
+    display: block;
+    margin: auto;
+}
+
+.quicklink div {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* primaryR2 */
+.vehicle-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.vehicles {
+    width: 286px;
+}
+
+.vehicles h3 {
+    margin-bottom: 0;
+}
+
+.vehicles img:hover {
+    opacity: 0.8;
+} 
+
+.vehicles div,
+.vehicles-btn {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.vehicles-btn {
+    position: relative;
+    font-weight: 600;
+    color: crimson;
+}
+
+.vehicles-btn::after {
+    content: "\003E";
+    position: absolute;
+    left: 105px;
+    transition: 0.3s;
+}
+
+.vehicles-btn:hover span {
+    text-decoration: underline;
+}
+
+.vehicles-btn:hover:after {
+    left: 110px;
+}
+
+/* primaryR3 */
+.banner-container {
+    position: relative;
+    margin:39.84px 0 19.92px 0;
+}
+
+.banner-text {
+    position: absolute;
+    width: 350px;
+    top: 15px;
+    left: 40px;
+}
+
+.banner-text div p,
+.banner-btn {
+    font-size: 16px;
+}
+
+.banner-btn {
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 40px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.banner-btn span {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.banner-btn:hover span {
+    left: 15px;
+}
+
+.banner-btn::after {
+    content: "\003E";
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.banner-btn:hover:after {
+    left: 135px;
+}
+
+/* primaryR4 */
+.energy-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.energy {
+    width: 286px;
+}
+
+.energy h3 {
+    margin-bottom: 0;
+}
+
+.energy img:hover {
+    opacity: 0.8;
+} 
+
+.energy div,
+.energy-btn {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.energy-btn {
+    position: relative;
+    font-weight: 600;
+    color: crimson;
+}
+
+.energy-btn::after {
+    content: "\003E";
+    position: absolute;
+    left: 105px;
+    transition: 0.3s;
+}
+
+.energy-btn:hover span {
+    text-decoration: underline;
+}
+
+.energy-btn:hover:after {
+    left: 110px;
+}
+
+/* primaryR5 */
+#primaryR5 {
+    margin: 50px 0;
+}
+.sns-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.sns-container h2 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: gray;
+}
+
+.sns-container ul {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.sns-container ul li {
+    display: inline-block;
+    width: 30px;
+    margin: 0 5px;
+    padding: 1px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+.sns-container ul li:hover {
+      opacity: 0.7;
+}
+
+.sns-container ul li a {
+    color: white;
+}
+
+.facebook {
+    background: #3B5998;
+}
+  
+.twitter {
+    background: #55ACEE;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer-base {
+    display: grid;
+    width: 1230px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+}
+
+.multilanguage-container::before {
+    content: "\f0ac";
+    display: inline-block;
+    clear: both;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    margin: auto 5px;
+}
+ 
+.footer-base-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-base-list ul li {
+    display: inline-block;
+    color: #343434;
+    margin-left: 20px;
+}
+
+.footer-base a {
+    text-decoration: none;
+    color: #343434;
+}
+
+.footer-base a:hover {
+    text-decoration: underline;
+}
