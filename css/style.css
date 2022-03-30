@@ -43,6 +43,7 @@ footer {
     margin: auto 0;
     padding: 16px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .topnav-list ul li::after,
@@ -74,6 +75,7 @@ footer {
     border: none;
     outline: none;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .shop-btn:active {
@@ -428,9 +430,10 @@ footer {
 
 .sns-container ul li {
     display: inline-block;
-    width: 30px;
+    width: 26px;
+    height: 26px;
+    padding: 2px;
     margin: 0 5px;
-    padding: 1px;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
